@@ -15,6 +15,7 @@ export class AppComponent {
   title = 'angular-task';
   data:any;
   showToast: any;
+  goTopage:any;
   showToasterr: any;
   x:any;
   
@@ -29,17 +30,19 @@ export class AppComponent {
     
     
      
-    this.showToast = ():void => {
+    this.showToast = (pageName:string):void => {
       const isChecked = document.querySelector('.true') as HTMLInputElement;
-      isChecked.checked ? 
-      this.toastr.success('some message', 'title')
-      :
-      this.toastr.error('some message', 'title');
+      if (isChecked.checked) {
+        this.toastr.success('Your form has been recorded', 'Successful')
+        this.router.navigate([`${pageName}`]);
+      } else {
+        this.toastr.error('Error', 'Try Again');
+      }
+  
+
     }; 
 
   }
 
-  goTopage(pageName:string):void{
-    this.router.navigate([`${pageName}`]);
-  } 
+  
 }

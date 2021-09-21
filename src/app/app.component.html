@@ -1,13 +1,16 @@
-
-
+<router-outlet></router-outlet>
+<div class="container">
 <div class="ui input">
+  <label for="">Enter FirstName: </label>
   <input type="text" placeholder="First Name">
+  
 </div>
 
 <br>
 <br>
 
 <div class="ui input">
+  <label for="">Enter LastName: </label>
   <input type="text" placeholder="Last Name">
 </div>
 
@@ -15,6 +18,7 @@
 <br>
 
 <div class="ui input">
+  <label for="">Enter your email: </label>
   <input type="text" placeholder="Email">
 </div>
 
@@ -22,12 +26,31 @@
 <br>
 
 <div class="ui input">
+  <label for="">Enter Phone no: </label>
   <input type="text" placeholder="Phone no">
 </div>
 
 <br>
 <br>
 
+<div class="select">
+  <select name="" id="" placeholder="select country">
+    <option value="" *ngFor="let item of data">
+      {{item.name}}
+    </option>
+  </select>
+  
+  
+  <select name="" id="" placeholder="">
+    <option value="">Frontend Developer</option>
+    <option value="">Backend Developer</option>
+    <option value="">Designer</option>
+    <option value="">Devops Engineer</option>
+  </select>
+</div>
+
+<br>
+<br>
 
 
 <div class="ui form">
@@ -51,16 +74,14 @@
 <br>
 
 
-<select name="" id="" placeholder="select country">
-  <option value="" *ngFor="let item of data">
-    {{item.name}}
-  </option>
-</select>
+
 
 <br>
 <br>
 
-<button (click)="showToast()">submit</button>
+<button (click)="showToast('Header')" class="submit">submit</button>
+
+</div>
 <!-- <button (click)="goTopage('Header')"> success page</button> -->
   <!-- <sui-select placeholder="Choose">
       <sui-select-option value="Option 1">Frontend Developer</sui-select-option>

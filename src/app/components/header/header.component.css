@@ -1,0 +1,15 @@
+.successpg {
+  height: 100vh;
+  background-color: rgba(0, 128, 0, 0.199);
+  padding: 10rem;
+}
+
+.successpg p {
+  color: black;
+  font-size: 40px;
+}
+
+.successpg button {
+  padding: 10px;
+  border-radius: 5px;
+}
